@@ -33,7 +33,12 @@ app.use(function (req, res, next) {
     "x-access-token, Origin, X-Requested-With, Content-Type, Accept"
   );
   console.log(req.path);
-  const allowedHosts = ["https://i-am-human.app/"];
+  const allowedHosts = [
+    "https://i-am-human.app/",
+    "https://i-am-human.app",
+    "https://i-am-human-dev.netlify.app",
+    "https://i-am-human-dev.netlify.app/",
+  ];
   if (allowedHosts.includes(req.headers.origin)) {
     next();
   } else {
@@ -44,12 +49,12 @@ app.use(function (req, res, next) {
 app.use(OtpRouter);
 app.use(SupabaseRouter);
 
-const port = process.env.PORT || 3001;
+// const port = process.env.PORT || 3001;
 
-app.listen(port, () => {
-  console.log("app running on port " + port);
-});
+// app.listen(port, () => {
+//   console.log("app running on port " + port);
+// });
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
-// exports.api = functions.https.onRequest(app);
+exports.dev = functions.https.onRequest(app);
