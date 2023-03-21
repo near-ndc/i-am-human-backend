@@ -1,22 +1,165 @@
-[debug] [2023-03-18T11:28:17.973Z] ----------------------------------------------------------------------
-[debug] [2023-03-18T11:28:17.976Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2023-03-18T11:28:17.976Z] CLI Version:   11.16.0
-[debug] [2023-03-18T11:28:17.976Z] Platform:      darwin
-[debug] [2023-03-18T11:28:17.976Z] Node Version:  v16.10.0
-[debug] [2023-03-18T11:28:17.985Z] Time:          Sat Mar 18 2023 16:58:17 GMT+0530 (India Standard Time)
-[debug] [2023-03-18T11:28:17.985Z] ----------------------------------------------------------------------
+[debug] [2023-03-21T06:52:51.549Z] ----------------------------------------------------------------------
+[debug] [2023-03-21T06:52:51.551Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-03-21T06:52:51.552Z] CLI Version:   11.16.0
+[debug] [2023-03-21T06:52:51.552Z] Platform:      darwin
+[debug] [2023-03-21T06:52:51.552Z] Node Version:  v16.10.0
+[debug] [2023-03-21T06:52:51.563Z] Time:          Tue Mar 21 2023 12:22:51 GMT+0530 (India Standard Time)
+[debug] [2023-03-21T06:52:51.564Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-03-18T11:28:17.987Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2023-03-18T11:28:18.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-03-18T11:28:18.063Z] > authorizing via signed-in user (harvydhillon16@gmail.com)
-[debug] [2023-03-18T11:28:18.063Z] [iam] checking project i-am-human-378114 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2023-03-18T11:28:18.064Z] > refreshing access token with scopes: []
-[debug] [2023-03-18T11:28:18.065Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-03-18T11:28:18.066Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-03-18T11:28:18.389Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-03-18T11:28:18.390Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-03-18T11:28:18.442Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions [none]
-[debug] [2023-03-18T11:28:18.442Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions x-goog-quota-user=projects/i-am-human-378114
-[debug] [2023-03-18T11:28:18.443Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
-[debug] [2023-03-18T11:28:18.772Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2023-03-18T11:28:18.772Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-21T06:52:51.567Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-21T06:52:51.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-21T06:52:51.644Z] > authorizing via signed-in user (harvydhillon16@gmail.com)
+[debug] [2023-03-21T06:52:51.644Z] [iam] checking project i-am-human-378114 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-03-21T06:52:51.645Z] > refreshing access token with scopes: []
+[debug] [2023-03-21T06:52:51.645Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-21T06:52:51.645Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-21T06:52:52.558Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-21T06:52:52.559Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-21T06:52:52.962Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-21T06:52:52.962Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-21T06:52:53.007Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions [none]
+[debug] [2023-03-21T06:52:53.008Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:52:53.008Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-03-21T06:52:54.312Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions 200
+[debug] [2023-03-21T06:52:54.312Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/i-am-human-378114:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-03-21T06:52:54.313Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/i-am-human-378114/serviceAccounts/i-am-human-378114@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-03-21T06:52:54.313Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/i-am-human-378114/serviceAccounts/i-am-human-378114@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-03-21T06:52:55.616Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/i-am-human-378114/serviceAccounts/i-am-human-378114@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-03-21T06:52:55.616Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/i-am-human-378114/serviceAccounts/i-am-human-378114@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'i-am-human-378114'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-03-21T06:52:55.621Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 [none]
+[debug] [2023-03-21T06:52:57.105Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 200
+[debug] [2023-03-21T06:52:57.105Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 {"projectId":"i-am-human-378114","projectNumber":"843863708772","displayName":"i-am-human","name":"projects/i-am-human-378114","resources":{"hostingSite":"i-am-human-378114"},"state":"ACTIVE","etag":"1_9bd95ed8-481f-4354-a0cf-a4952892b094"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-03-21T06:52:57.107Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-03-21T06:52:57.107Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:52:57.108Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-03-21T06:52:57.108Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:52:57.109Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudbuild.googleapis.com [none]
+[debug] [2023-03-21T06:52:57.109Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudbuild.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:52:57.110Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/artifactregistry.googleapis.com [none]
+[debug] [2023-03-21T06:52:57.110Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/artifactregistry.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:52:58.633Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudbuild.googleapis.com 200
+[debug] [2023-03-21T06:52:58.634Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-03-21T06:52:58.635Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/artifactregistry.googleapis.com 200
+[debug] [2023-03-21T06:52:58.636Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-03-21T06:52:58.640Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudfunctions.googleapis.com 200
+[debug] [2023-03-21T06:52:58.640Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-03-21T06:52:58.648Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/runtimeconfig.googleapis.com 200
+[debug] [2023-03-21T06:52:58.648Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-03-21T06:52:58.649Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114/adminSdkConfig [none]
+[debug] [2023-03-21T06:52:59.811Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114/adminSdkConfig 200
+[debug] [2023-03-21T06:52:59.811Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114/adminSdkConfig {"projectId":"i-am-human-378114","storageBucket":"i-am-human-378114.appspot.com"}
+[debug] [2023-03-21T06:52:59.812Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/i-am-human-378114/configs [none]
+[debug] [2023-03-21T06:53:01.126Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/i-am-human-378114/configs 200
+[debug] [2023-03-21T06:53:01.127Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/i-am-human-378114/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2023-03-21T06:53:01.130Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-03-21T06:53:02.795Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.10.0",
+    "body-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "latest"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-03-21T06:53:02.795Z] Building nodejs source
+[debug] [2023-03-21T06:53:02.797Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-03-21T06:53:03.017Z] Serving at port 9005
+
+[debug] [2023-03-21T06:53:03.483Z] Got response from /__/functions.yaml {"endpoints":{"dev":{"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"dev"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-03-21T06:53:03.493Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/harjaapdhillon/Desktop/code/i-am-human-dapp/i-am-human-backend-v2/functions (98.27 KB) for uploading 
+[debug] [2023-03-21T06:53:03.555Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/i-am-human-378114/locations/-/functions [none]
+[debug] [2023-03-21T06:53:05.154Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/i-am-human-378114/locations/-/functions 200
+[debug] [2023-03-21T06:53:05.154Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/i-am-human-378114/locations/-/functions {}
+[debug] [2023-03-21T06:53:05.156Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-03-21T06:53:06.546Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/-/functions 200
+[debug] [2023-03-21T06:53:06.546Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/-/functions {"functions":[{"name":"projects/i-am-human-378114/locations/us-central1/functions/dev","buildConfig":{"build":"projects/843863708772/locations/us-central1/builds/51005403-9529-4e6f-a786-b7dc38c7e9ab","runtime":"nodejs16","entryPoint":"dev","source":{"storageSource":{"bucket":"gcf-v2-sources-843863708772-us-central1","object":"dev/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-843863708772-us-central1","object":"dev/function-source.zip","generation":"1679138942461752"}}},"serviceConfig":{"service":"projects/i-am-human-378114/locations/us-central1/services/dev","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"i-am-human-378114\",\"storageBucket\":\"i-am-human-378114.appspot.com\"}","GCLOUD_PROJECT":"i-am-human-378114","EVENTARC_CLOUD_EVENT_SOURCE":"projects/i-am-human-378114/locations/us-central1/services/dev"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://dev-ophc7vkxsq-uc.a.run.app","serviceAccountEmail":"843863708772-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"dev-00004-viy","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-03-18T11:30:16.774529534Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d2e5d821dc253e01e9a20c2e03a44bc421029fce"},"environment":"GEN_2"},{"name":"projects/i-am-human-378114/locations/us-central1/functions/api","buildConfig":{"build":"projects/843863708772/locations/us-central1/builds/5c058c86-aa98-41ea-ab5b-f139640ef56a","runtime":"nodejs16","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-843863708772-us-central1","object":"api/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-843863708772-us-central1","object":"api/function-source.zip","generation":"1678558912609864"}}},"serviceConfig":{"service":"projects/i-am-human-378114/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"i-am-human-378114\",\"storageBucket\":\"i-am-human-378114.appspot.com\"}","GCLOUD_PROJECT":"i-am-human-378114","EVENTARC_CLOUD_EVENT_SOURCE":"projects/i-am-human-378114/locations/us-central1/services/api"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://api-ophc7vkxsq-uc.a.run.app","serviceAccountEmail":"843863708772-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00003-xad","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-03-11T18:23:24.219396547Z","labels":{"firebase-functions-hash":"b76def62a0e080e83e275908fc6712213a5be25d","deployment-tool":"cli-firebase"},"environment":"GEN_2"}]}
+[debug] [2023-03-21T06:53:06.547Z] >>> [apiv2][query] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/dev [none]
+[debug] [2023-03-21T06:53:06.549Z] >>> [apiv2][query] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/api [none]
+[debug] [2023-03-21T06:53:08.026Z] <<< [apiv2][status] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/dev 200
+[debug] [2023-03-21T06:53:08.026Z] <<< [apiv2][body] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/dev {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"name":"dev","namespace":"843863708772","selfLink":"/apis/serving.knative.dev/v1/namespaces/843863708772/services/dev","uid":"36a8183f-c751-4a25-8e2d-199e1a4fd702","resourceVersion":"AAX3KwSRhEE","generation":4,"labels":{"goog-managed-by":"cloudfunctions","goog-cloudfunctions-runtime":"nodejs16","cloud.googleapis.com/location":"us-central1"},"annotations":{"run.googleapis.com/client-name":"cli-firebase","serving.knative.dev/creator":"service-843863708772@gcf-admin-robot.iam.gserviceaccount.com","serving.knative.dev/lastModifier":"service-843863708772@gcf-admin-robot.iam.gserviceaccount.com","client.knative.dev/user-image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/dev:version_1","cloudfunctions.googleapis.com/function-id":"dev","run.googleapis.com/operation-id":"39e41754-f900-4db4-896c-871d5575cd15","run.googleapis.com/ingress":"all","run.googleapis.com/ingress-status":"all"},"creationTimestamp":"2023-03-13T17:39:24.413622Z"},"spec":{"template":{"metadata":{"name":"dev-00004-viy","annotations":{"run.googleapis.com/client-name":"cli-firebase","cloudfunctions.googleapis.com/trigger-type":"HTTP_TRIGGER","client.knative.dev/user-image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/dev:version_1","autoscaling.knative.dev/maxScale":"100","run.googleapis.com/cpu-throttling":"true","run.googleapis.com/startup-cpu-boost":"true"}},"spec":{"containerConcurrency":80,"timeoutSeconds":60,"serviceAccountName":"843863708772-compute@developer.gserviceaccount.com","containers":[{"image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/dev:version_1","env":[{"name":"FIREBASE_CONFIG","value":"{\"projectId\":\"i-am-human-378114\",\"storageBucket\":\"i-am-human-378114.appspot.com\"}"},{"name":"GCLOUD_PROJECT","value":"i-am-human-378114"},{"name":"EVENTARC_CLOUD_EVENT_SOURCE","value":"projects/i-am-human-378114/locations/us-central1/services/dev"}],"resources":{"limits":{"cpu":"1","memory":"256Mi"}},"ports":[{"name":"http1","containerPort":8080}]}]}},"traffic":[{"percent":100,"latestRevision":true}]},"status":{"observedGeneration":4,"conditions":[{"type":"Ready","status":"True","lastTransitionTime":"2023-03-18T11:30:15.694371Z"},{"type":"ConfigurationsReady","status":"True","lastTransitionTime":"2023-03-18T11:30:10.916087Z"},{"type":"RoutesReady","status":"True","lastTransitionTime":"2023-03-18T11:30:15.853121Z"}],"latestReadyRevisionName":"dev-00004-viy","latestCreatedRevisionName":"dev-00004-viy","traffic":[{"revisionName":"dev-00004-viy","percent":100,"latestRevision":true}],"url":"https://dev-ophc7vkxsq-uc.a.run.app","address":{"url":"https://dev-ophc7vkxsq-uc.a.run.app"}}}
+[debug] [2023-03-21T06:53:08.066Z] <<< [apiv2][status] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/api 200
+[debug] [2023-03-21T06:53:08.066Z] <<< [apiv2][body] GET https://run.googleapis.com/v1/projects/i-am-human-378114/locations/us-central1/services/api {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"name":"api","namespace":"843863708772","selfLink":"/apis/serving.knative.dev/v1/namespaces/843863708772/services/api","uid":"f70c14cf-ac1f-481a-a5a3-4bfe68b6ae5b","resourceVersion":"AAX2o/kEVsI","generation":3,"labels":{"goog-managed-by":"cloudfunctions","goog-cloudfunctions-runtime":"nodejs16","cloud.googleapis.com/location":"us-central1"},"annotations":{"run.googleapis.com/client-name":"cli-firebase","serving.knative.dev/creator":"service-843863708772@gcf-admin-robot.iam.gserviceaccount.com","serving.knative.dev/lastModifier":"service-843863708772@gcf-admin-robot.iam.gserviceaccount.com","client.knative.dev/user-image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/api:version_1","cloudfunctions.googleapis.com/function-id":"api","run.googleapis.com/operation-id":"6e50debd-d391-490c-8c38-6db552c66467","run.googleapis.com/ingress":"all","run.googleapis.com/ingress-status":"all"},"creationTimestamp":"2023-02-21T21:59:02.767634Z"},"spec":{"template":{"metadata":{"name":"api-00003-xad","annotations":{"run.googleapis.com/client-name":"cli-firebase","cloudfunctions.googleapis.com/trigger-type":"HTTP_TRIGGER","client.knative.dev/user-image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/api:version_1","autoscaling.knative.dev/maxScale":"100","run.googleapis.com/cpu-throttling":"true","run.googleapis.com/startup-cpu-boost":"true"}},"spec":{"containerConcurrency":80,"timeoutSeconds":60,"serviceAccountName":"843863708772-compute@developer.gserviceaccount.com","containers":[{"image":"us-central1-docker.pkg.dev/i-am-human-378114/gcf-artifacts/api:version_1","env":[{"name":"FIREBASE_CONFIG","value":"{\"projectId\":\"i-am-human-378114\",\"storageBucket\":\"i-am-human-378114.appspot.com\"}"},{"name":"GCLOUD_PROJECT","value":"i-am-human-378114"},{"name":"EVENTARC_CLOUD_EVENT_SOURCE","value":"projects/i-am-human-378114/locations/us-central1/services/api"}],"resources":{"limits":{"cpu":"1","memory":"256Mi"}},"ports":[{"name":"http1","containerPort":8080}]}]}},"traffic":[{"percent":100,"latestRevision":true}]},"status":{"observedGeneration":3,"conditions":[{"type":"Ready","status":"True","lastTransitionTime":"2023-03-11T18:23:21.268753Z"},{"type":"ConfigurationsReady","status":"True","lastTransitionTime":"2023-03-11T18:23:15.428645Z"},{"type":"RoutesReady","status":"True","lastTransitionTime":"2023-03-11T18:23:21.466562Z"}],"latestReadyRevisionName":"api-00003-xad","latestCreatedRevisionName":"api-00003-xad","traffic":[{"revisionName":"api-00003-xad","percent":100,"latestRevision":true}],"url":"https://api-ophc7vkxsq-uc.a.run.app","address":{"url":"https://api-ophc7vkxsq-uc.a.run.app"}}}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-03-21T06:53:08.075Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/run.googleapis.com [none]
+[debug] [2023-03-21T06:53:08.075Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/run.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:53:08.077Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/eventarc.googleapis.com [none]
+[debug] [2023-03-21T06:53:08.077Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/eventarc.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:53:08.078Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/pubsub.googleapis.com [none]
+[debug] [2023-03-21T06:53:08.079Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/pubsub.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:53:08.080Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/storage.googleapis.com [none]
+[debug] [2023-03-21T06:53:08.080Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/storage.googleapis.com x-goog-quota-user=projects/i-am-human-378114
+[debug] [2023-03-21T06:53:09.331Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/run.googleapis.com 200
+[debug] [2023-03-21T06:53:09.332Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2023-03-21T06:53:09.346Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/pubsub.googleapis.com 200
+[debug] [2023-03-21T06:53:09.346Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-03-21T06:53:09.358Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/storage.googleapis.com 200
+[debug] [2023-03-21T06:53:09.359Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-03-21T06:53:09.421Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/eventarc.googleapis.com 200
+[debug] [2023-03-21T06:53:09.422Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/i-am-human-378114/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-03-21T06:53:09.424Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-03-21T06:53:09.426Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-03-21T06:53:10.704Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-03-21T06:53:10.705Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-843863708772@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"112666512576492735764"}}
+[debug] [2023-03-21T06:53:10.743Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-03-21T06:53:10.744Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/843863708772/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-843863708772@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"110803872045352029257"}}
+[debug] [2023-03-21T06:53:10.748Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 [none]
+[debug] [2023-03-21T06:53:11.851Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 200
+[debug] [2023-03-21T06:53:11.851Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/i-am-human-378114 {"projectId":"i-am-human-378114","projectNumber":"843863708772","displayName":"i-am-human","name":"projects/i-am-human-378114","resources":{"hostingSite":"i-am-human-378114"},"state":"ACTIVE","etag":"1_9bd95ed8-481f-4354-a0cf-a4952892b094"}
+[debug] [2023-03-21T06:53:11.854Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-03-21T06:53:13.035Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-03-21T06:53:13.036Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/i-am-human-378114/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-843863708772-us-central1/a494bce1-9157-4de9-9325-47abaa948257.zip?GoogleAccessId=service-843863708772@gcf-admin-robot.iam.gserviceaccount.com&Expires=1679383393&Signature=DN7c318OSdpWU5B6rAGyFNE90v24S1K9NrSbzGhVCt8Ado%2Fc68c%2B0yBe4kHJoENOY0BQJBy2azFEdaHigIKbB2PK1fNLy3eC8IHCS9%2BiaSyoEFR%2F1llh0w6vCjZY8oC6mIXMfQsaja7%2BHPeJR4%2Bk5xzQIC5tbQW4DKBIK%2Bnt%2BEDgHNN2o%2Bf56%2Bi4kTCpJg%2FKVWOxeAlRB51zqHxs20d1yBVlicLldxk38TFkrbdaOtil%2BIIAuERAVFDEzXjvCeE2Wz5Y8duBMBt4tQ1oKU32ggjXdoENBOSXiglt706PidaWY2SmFDFjixEKtSK9v8wyZeiy9SWINhWITf6Hz7i0vg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-843863708772-us-central1","object":"a494bce1-9157-4de9-9325-47abaa948257.zip"}}
+[debug] [2023-03-21T06:53:13.037Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-843863708772-us-central1/a494bce1-9157-4de9-9325-47abaa948257.zip GoogleAccessId=service-843863708772%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1679383393&Signature=DN7c318OSdpWU5B6rAGyFNE90v24S1K9NrSbzGhVCt8Ado%2Fc68c%2B0yBe4kHJoENOY0BQJBy2azFEdaHigIKbB2PK1fNLy3eC8IHCS9%2BiaSyoEFR%2F1llh0w6vCjZY8oC6mIXMfQsaja7%2BHPeJR4%2Bk5xzQIC5tbQW4DKBIK%2Bnt%2BEDgHNN2o%2Bf56%2Bi4kTCpJg%2FKVWOxeAlRB51zqHxs20d1yBVlicLldxk38TFkrbdaOtil%2BIIAuERAVFDEzXjvCeE2Wz5Y8duBMBt4tQ1oKU32ggjXdoENBOSXiglt706PidaWY2SmFDFjixEKtSK9v8wyZeiy9SWINhWITf6Hz7i0vg%3D%3D
+[debug] [2023-03-21T06:53:13.037Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-843863708772-us-central1/a494bce1-9157-4de9-9325-47abaa948257.zip [stream]
+[debug] [2023-03-21T06:53:15.224Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-843863708772-us-central1/a494bce1-9157-4de9-9325-47abaa948257.zip 200
+[debug] [2023-03-21T06:53:15.224Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-843863708772-us-central1/a494bce1-9157-4de9-9325-47abaa948257.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	api(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
