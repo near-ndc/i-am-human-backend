@@ -10,6 +10,7 @@ const serviceAccount = require("./i-am-human.json");
 const OtpRouter = require("./router/otp");
 const SupabaseRouter = require("./router/supabase");
 const Is_Admin = require("./router/is_admin");
+const PII = require("./router/encypt-decrypt-pii");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -36,7 +37,7 @@ app.use(function (req, res, next) {
     "https://i-am-human.app/",
     "https://i-am-human-dev.netlify.app/",
     'https://i-am-human-dev.netlify.app',
-    'https://i-am-human.app'
+    'https://i-am-human.app',
   ];
   if (allowedHosts.includes(req.headers.origin)) {
     next();
@@ -48,6 +49,7 @@ app.use(function (req, res, next) {
 app.use(OtpRouter);
 app.use(SupabaseRouter);
 app.use(Is_Admin);
+app.use(PII);
 
 // const port = process.env.PORT || 3001;
 
