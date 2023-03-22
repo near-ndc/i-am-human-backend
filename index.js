@@ -35,6 +35,8 @@ app.use(function (req, res, next) {
   const allowedHosts = [
     "https://i-am-human.app/",
     "https://i-am-human-dev.netlify.app/",
+    'https://i-am-human-dev.netlify.app',
+    'https://i-am-human.app'
   ];
   if (allowedHosts.includes(req.headers.origin)) {
     next();
