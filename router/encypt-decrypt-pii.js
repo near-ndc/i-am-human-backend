@@ -16,7 +16,6 @@ Router.post("/encrypt-pii-number", async (req, res) => {
     .from("users")
     .update({ encypted_telegram_number: encrypted_number })
     .match({ wallet_identifier: wallet });
-  console.log(encrypted_number);
   res.send(true);
 });
 
