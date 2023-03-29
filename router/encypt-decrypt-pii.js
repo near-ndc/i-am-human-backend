@@ -25,6 +25,7 @@ Router.post("/decrypt-pii-number", async (req, res) => {
     .from("users")
     .select("*")
     .match({ wallet_identifier: wallet });
+  console.log(process.env)
   const number = decryptWithPrivateKey(
     process.env.PRIVATE_KEY,
     data[0].encypted_telegram_number

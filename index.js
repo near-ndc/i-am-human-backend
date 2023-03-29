@@ -1,3 +1,4 @@
+require('dotenv').config()
 const functions = require("firebase-functions/v2");
 const admin = require("firebase-admin");
 
@@ -38,6 +39,7 @@ app.use(function (req, res, next) {
     "https://i-am-human-dev.netlify.app/",
     'https://i-am-human-dev.netlify.app',
     'https://i-am-human.app',
+    "http://localhost:3000",
   ];
   if (allowedHosts.includes(req.headers.origin)) {
     next();
@@ -51,12 +53,12 @@ app.use(SupabaseRouter);
 app.use(Is_Admin);
 app.use(PII);
 
-// const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
-// app.listen(port, () => {
-//   console.log("app running on port " + port);
-// });
+app.listen(port, () => {
+  console.log("app running on port " + port);
+});
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
-exports.dev = functions.https.onRequest(app);
+// exports.dev = functions.https.onRequest(app);
