@@ -16,6 +16,7 @@
     "@supabase/supabase-js": "^2.10.0",
     "body-parser": "latest",
     "cors": "latest",
+    "dotenv": "^16.0.3",
     "express": "latest",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",

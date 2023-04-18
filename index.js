@@ -1,3 +1,4 @@
+require('dotenv').config()
 const functions = require("firebase-functions/v2");
 const admin = require("firebase-admin");
 
@@ -9,6 +10,8 @@ const app = express();
 const serviceAccount = require("./i-am-human.json");
 const OtpRouter = require("./router/otp");
 const SupabaseRouter = require("./router/supabase");
+const Is_Admin = require("./router/is_admin");
+const PII = require("./router/encypt-decrypt-pii");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -21,8 +24,7 @@ app.use(cors({ origin: true }));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ limit: "100mb" }));
 app.use(function (req, res, next) {
-  console.log(req.headers.origin);
-
+  console.log(req.url)
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Methods",
@@ -32,8 +34,13 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "x-access-token, Origin, X-Requested-With, Content-Type, Accept"
   );
-  console.log(req.path);
-  const allowedHosts = ["https://i-am-human.app/"];
+  const allowedHosts = [
+    "https://i-am-human.app/",
+    "https://i-am-human-dev.netlify.app/",
+    'https://i-am-human-dev.netlify.app',
+    'https://i-am-human.app',
+    "http://localhost:3000",
+  ];
   if (allowedHosts.includes(req.headers.origin)) {
     next();
   } else {
@@ -43,6 +50,8 @@ app.use(function (req, res, next) {
 
 app.use(OtpRouter);
 app.use(SupabaseRouter);
+app.use(Is_Admin);
+app.use(PII);
 
 const port = process.env.PORT || 3001;
 
@@ -52,4 +61,4 @@ app.listen(port, () => {
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
-// exports.api = functions.https.onRequest(app);
+// exports.dev = functions.https.onRequest(app);
