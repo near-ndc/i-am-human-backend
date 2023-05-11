@@ -20,6 +20,7 @@
     "express": "latest",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",
+    "nodemailer": "^6.9.1",
     "twilio": "latest"
   },
   "devDependencies": {

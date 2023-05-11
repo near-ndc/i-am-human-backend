@@ -12,6 +12,8 @@ const OtpRouter = require("./router/otp");
 const SupabaseRouter = require("./router/supabase");
 const Is_Admin = require("./router/is_admin");
 const PII = require("./router/encypt-decrypt-pii");
+const SendEmail = require("./router/send-email");
+
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -34,24 +36,17 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "x-access-token, Origin, X-Requested-With, Content-Type, Accept"
   );
-  const allowedHosts = [
-    "https://i-am-human.app/",
-    "https://i-am-human-dev.netlify.app/",
-    'https://i-am-human-dev.netlify.app',
-    'https://i-am-human.app',
-    "http://localhost:3000",
-  ];
-  if (allowedHosts.includes(req.headers.origin)) {
+
     next();
-  } else {
-    res.send("Access Denied");
-  }
+ 
 });
 
 app.use(OtpRouter);
 app.use(SupabaseRouter);
 app.use(Is_Admin);
 app.use(PII);
+app.use(SendEmail);
+
 
 const port = process.env.PORT || 3001;
 
