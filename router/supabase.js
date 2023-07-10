@@ -14,8 +14,33 @@ Router.post("/select", async (req, res) => {
     const { error, data } = await supabase.from(table).select("*").match(match);
     res.send({ error, data });
   } else {
-    const { error, data } = await supabase.from(table).select("*");
-    res.send({ error, data });
+    // the result can be > 1000, so need pagination
+    let errorMessage = ""
+    let pageIndex = 0;
+    let pageSize = 1000; // Number of records to fetch per page
+    let totalResults = [];
+    let runCode = true;
+    while (runCode) {
+      const { error, data } = await supabase.from(table).select('*')
+      .range(pageIndex * pageSize, (pageIndex + 1) * pageSize - 1);
+
+      if (error) {
+        errorMessage = error
+        runCode = false;
+        break;
+      }
+
+      if (data.length === 0) {
+        runCode = false;
+        // No more results, break the loop
+        break;
+      }
+
+      totalResults = totalResults.concat(data);
+      pageIndex++;
+    }
+    await Promise.all(totalResults);
+    res.send({ error:errorMessage, data:totalResults });
   }
 });
 
