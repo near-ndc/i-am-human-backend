@@ -8,8 +8,7 @@ const { urlencoded, json } = require("body-parser");
 const app = express();
 
 const serviceAccount = require("./i-am-human.json");
-const SupabaseRouter = require("./router/supabase");
-const Is_Admin = require("./router/is_admin");
+const scoreboardRouter = require("./router/scoreboard");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -31,22 +30,10 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "x-access-token, Origin, X-Requested-With, Content-Type, Accept"
   );
-  const allowedHosts = [
-    "https://i-am-human.app/",
-    "https://i-am-human-dev.netlify.app/",
-    'https://i-am-human-dev.netlify.app',
-    'https://i-am-human.app',
-  ];
-  
-  if (allowedHosts.includes(req.headers.origin)) {
     next();
-  } else {
-    res.send("Access Denied");
-  }
 });
 
-app.use(SupabaseRouter);
-app.use(Is_Admin);
+app.use(scoreboardRouter);
 
 const port = process.env.PORT || 3001;
 
