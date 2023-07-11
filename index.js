@@ -31,9 +31,18 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "x-access-token, Origin, X-Requested-With, Content-Type, Accept"
   );
-
+  const allowedHosts = [
+    "https://i-am-human.app/",
+    "https://i-am-human-dev.netlify.app/",
+    'https://i-am-human-dev.netlify.app',
+    'https://i-am-human.app',
+  ];
+  
+  if (allowedHosts.includes(req.headers.origin)) {
     next();
- 
+  } else {
+    res.send("Access Denied");
+  }
 });
 
 app.use(SupabaseRouter);
