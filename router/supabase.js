@@ -1,6 +1,7 @@
 const express = require("express");
 const Router = new express.Router();
 const { supabase } = require("../utils/supabase");
+const requestIp = require('request-ip')
 
 Router.post("/insert", async (req, res) => {
   const { body, table } = req.body;
@@ -55,5 +56,15 @@ Router.post("/delete", async (req, res) => {
   const { error, data } = await supabase.from(table).delete().match(match);
   res.send({ error, data });
 });
+
+
+Router.post('/store-ip', async (req, res) => {
+  const { match, body, table } = req.body;
+  var clientIp = requestIp.getClientIp(req)
+  let updatedBody = {...body , client_ip:clientIp}
+  const { error, data } = await supabase.from(table).update(updatedBody).match(match);
+  res.send({ error, data });
+});
+
 
 module.exports = Router;
