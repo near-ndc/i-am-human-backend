@@ -58,7 +58,7 @@ Router.post("/delete", async (req, res) => {
 });
 
 
-Router.post('/storeIP', async (req, res) => {
+Router.post('/store-ip', async (req, res) => {
   const { match, body, table } = req.body;
   var clientIp = requestIp.getClientIp(req)
   let updatedBody = {...body , client_ip:clientIp}
