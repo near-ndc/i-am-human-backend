@@ -8,10 +8,8 @@ const { urlencoded, json } = require("body-parser");
 const app = express();
 
 const serviceAccount = require("./i-am-human.json");
-const OtpRouter = require("./router/otp");
 const SupabaseRouter = require("./router/supabase");
 const Is_Admin = require("./router/is_admin");
-const PII = require("./router/encypt-decrypt-pii");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -24,7 +22,6 @@ app.use(cors({ origin: true }));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ limit: "100mb" }));
 app.use(function (req, res, next) {
-  console.log(req.url)
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Methods",
@@ -39,8 +36,8 @@ app.use(function (req, res, next) {
     "https://i-am-human-dev.netlify.app/",
     'https://i-am-human-dev.netlify.app',
     'https://i-am-human.app',
-    "http://localhost:3000",
   ];
+  
   if (allowedHosts.includes(req.headers.origin)) {
     next();
   } else {
@@ -48,10 +45,8 @@ app.use(function (req, res, next) {
   }
 });
 
-app.use(OtpRouter);
 app.use(SupabaseRouter);
 app.use(Is_Admin);
-app.use(PII);
 
 const port = process.env.PORT || 3001;
 
